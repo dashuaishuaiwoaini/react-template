@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import 'variable';
+
+
+// 提示问题
+.ant-message-notice:first-child {
+  margin-top: 64px !important;
+}
+.ant-message-notice {
+  .ant-message-notice-content {
+    border-radius: 25px;
+    font-size: 14px;
+    color: #292D4D;
+    letter-spacing: -0px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  }
+  .anticon {
+    top: -2px !important;
+  }
+
+  .anticon:before {
+    content: "" !important;
+  }
+}
+// 选择文字的背景色
+::selection {
+  background:$diyColor;
+  color:#fff;
+}

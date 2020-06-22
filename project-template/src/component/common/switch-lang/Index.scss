@@ -1,0 +1,31 @@
+@import '../../../sass/common/_variable';
+
+.header-lang-wrapper {
+  .vertival-line {
+    font-size: .20rem!important;
+    margin: 0 .05rem;
+  }
+  .lang-btn  {
+    cursor: pointer;
+    font-size: .20rem;
+    font-weight: normal!important;
+    &.active-lang {
+      color:$diyColor;
+    }
+  }
+  & > div:nth-of-type(1) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .private-policy {
+      font-family: $quicksandLight;
+      font-size: .12rem;
+      color: #7F8194;
+      padding: 0 .15rem;
+    }
+    .switch-lang {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

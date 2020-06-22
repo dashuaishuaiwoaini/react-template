@@ -1,0 +1,153 @@
+﻿@charset "utf-8";
+
+//清除浮动
+@mixin clearfix {
+  &:before, &:after { content: ""; display: table}
+  &:after { clear: both;}
+}
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation($string...) {
+    -webkit-animation: $string;
+    -moz-animation: $string;
+    -ms-animation: $string;
+    -o-animation: $string;
+    animation: $string;
+}
+@mixin transition($string...) {
+    -webkit-transition: $string;
+    -moz-transition: $string;
+    -ms-transition: $string;
+    -o-transition: $string;
+    transition: $string;
+}
+@mixin transform($string) {
+    -webkit-transform: $string;
+    -moz-transform: $string;
+    -ms-transform: $string;
+    -o-transform: $string;
+    transform: $string;
+}
+@mixin border-radius($string) {
+    -webkit-border-radius: $string;
+    -moz-border-radius: $string;
+    -ms-border-radius: $string;
+    -o-border-radius: $string;
+    border-radius: $string;
+}
+
+// arrow(direction,size,color);
+//箭头
+@mixin arrow($direction,
+$size,
+$color) {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    border-width: $size;
+    @if $direction == top {
+        border-style: dashed dashed solid dashed;
+        border-color: transparent transparent $color transparent;
+        border-top: none;
+    }
+    @else if $direction == bottom {
+        border-style: solid dashed dashed dashed;
+        border-color: $color transparent transparent transparent;
+        border-bottom: none;
+    }
+    @else if $direction == right {
+        border-style: dashed dashed dashed solid;
+        border-color: transparent transparent transparent $color;
+        border-right: none;
+    }
+    @else if $direction == left {
+        border-style: dashed solid dashed dashed;
+        border-color: transparent $color transparent transparent;
+        border-left: none;
+    }
+}
+
+//超过的文字就显示...
+@mixin ell {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+//文字自动换行
+@mixin line-wrap{
+    overflow: hidden;
+    word-wrap: normal;
+    word-break: break-all;
+  }
+
+//禁止选择文字
+@mixin userSelect {
+    -moz-user-select: none; /* firefox */
+    -webkit-user-select: none; /* webkit */
+    -ms-user-select: none; /* IE10 */
+    -khtml-user-select: none; /* old */
+    user-select: none;
+}
+// flexbox 布局
+@mixin flexbox {
+    display: -webkit-flex;
+    display: flex;
+    overflow: hidden;
+}
+// flex 均分
+@mixin flex {
+    display: block;
+    width: 100%;
+    -webkit-flex: 1;
+    flex: 1;
+}
+// 取消 flex 均分
+@mixin flex_none {
+    flex: none;
+}
+//文字多行垂直居中
+@mixin font-vertical($height){
+    height:$height ;
+    &:before{
+        content:"";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+    .font-vertical{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+//上下居中
+@mixin pos-vertical{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+//左右居中
+@mixin pos-center{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

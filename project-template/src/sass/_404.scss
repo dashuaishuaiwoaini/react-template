@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+.nomatch-box{
+    text-align: center;
+    padding-bottom: 6px;
+    
+   
+    img{
+        width: 200px;
+        margin-top: 100px;
+        margin-bottom: 38px;
+    }
+    .title{
+        font-size: 38px;
+        color:rgb(40 ,44, 76);
+    }
+    .text{
+        margin: 30px;
+        font-size: 16px;
+        margin-top: 17px;
+        line-height: 28px;
+        margin-bottom: 87px;        
+    }
+    a{
+       display: inline-block;
+       background-color:  $diyColor;
+       color:#fff;
+       height: 40px;
+       width: 120px;
+       text-align: center;
+       font-size: 16px;
+       border-radius: 5px;
+       line-height: 40px;
+    }
+    a:hover{
+        color: #fff;
+    }
+}

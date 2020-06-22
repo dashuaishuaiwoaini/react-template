@@ -1,0 +1,15 @@
+{
+  "name": "zati-react",
+  "version": "5.0.2",
+  "description": "react空项目脚手架，集成react常见通用解决方案",
+  "main": "index.js",
+  "bin": {
+    "zati-react": "./index.js"
+  },
+  "keywords": [
+    "react",
+    "za"
+  ],
+  "author": "gungun<pangzhongwu@zhongan.io>",
+  "license": "ISC"
+}

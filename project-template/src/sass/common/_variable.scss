@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* variable.css */
+$imghost:"";
+$fonthost:"";
+/*Color*/
+//页面个性化颜色
+$diyColor: #05B5B0;
+$diyColor2: #48CC5E;
+//价格字体颜色
+$colorPrice: #fd8012;
+$bgColor:#F5F5F5;
+
+// 字体变量
+$quicksandBold: Quicksand-Bold, "PingFang TC", "苹方", "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1",sans-serif;
+$quicksandLight: Quicksand-Light "PingFang TC", "苹方", "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1",sans-serif;
+$quicksandMedium: Quicksand-Medium, "PingFang TC", "苹方", "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1",sans-serif;
+$quicksandRegular: Quicksand-Regular, "PingFang TC", "苹方", "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1",sans-serif;
+
+$color:#333 #666 #999;
+$font-size-root: 0.24rem !default;
+$global-font: #{$font-size-root}/1.5 "Quicksand-Medium", "PingFang TC", "苹方", "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1",sans-serif;
+
+//border
+@mixin border($dir) {
+  @if $dir == 'all' {
+    border:  1px solid #d8d8d8;
+  } @else {
+    border-#{$dir}: 1px solid #d8d8d8;
+  }
+}

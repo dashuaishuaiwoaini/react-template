@@ -1,0 +1,8 @@
+{
+  "plugins": ["dynamic-import-node"],
+  "presets": [
+    "latest",
+    "react",
+    "stage-0"
+  ]
+}

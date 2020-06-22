@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "工程名",
+      "script": "server.js",
+      "exec_mode": "fork",
+      "instances": 1,
+      "max_memory_restart": "20480M",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "error_file": "/home/zaspace/logs/工程名-log/err.log",
+      "out_file":"/home/zaspace/logs/工程名-log/info.log",
+      "merge_logs": true
+    }
+  ]
+}

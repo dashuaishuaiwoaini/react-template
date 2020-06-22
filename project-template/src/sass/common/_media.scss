@@ -1,0 +1,20 @@
+
+@charset "utf-8";
+
+/* 尺寸换算 */
+$base-fonts-default: 100px; //基准数
+@function rem($px){
+    @return $px / $base-fonts-default *1rem;
+}
+/* 媒体查询 */
+$max-container: 750px;
+$responsives:320px, 360px, 375px, 384px, 394px, 414px, 480px, 540px, 640px, 750px;  // 屏幕断点
+@mixin fz($values){//让字体大小随着屏幕大小改变
+    font-size: ($values * $base-fonts-default / $max-container) ;
+}
+@each $responsive in $responsives {
+  @media only screen and (min-width: #{$responsive}) {
+       html{ @include fz($responsive);}
+       body { font-size: ($responsive * $base-fonts-default / $max-container)*0.24;}
+   }
+}

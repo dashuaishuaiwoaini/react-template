@@ -1,0 +1,10 @@
+﻿@charset "utf-8";
+@import "common/global";
+@import "404";
+@import "main";
+@import "loading";
+
+.test {
+  display: flex;
+  border-radius: 4px;
+}
